@@ -9,7 +9,7 @@ Opazoval bom naslednje podatke:
 * tema
 * število kock
 * cena
-* leto izida
+* datum izdaje
 * cena po kocki
 * minifigs
 * ocena
@@ -17,7 +17,7 @@ Opazoval bom naslednje podatke:
 * popularnost
 
 Hipoteze:
-* Kako je cena po kocki odvisna od teme,
-* Spreminjanje povprečne cene setov iz posamezne teme v odvisnosti od leta izdaje,
-* Cena minifigure v odvisnosti od teme, leta izdaje, dostopnosti,
+* Kako je cena po kocki odvisna od teme
+* Spreminjanje povprečne cene setov iz posamezne teme v odvisnosti od leta izdaje
+* Cena minifigure v odvisnosti od teme, leta izdaje, dostopnosti
 * Popularnost v odvisnosti od teme, števila minifigur, cene po kocki
