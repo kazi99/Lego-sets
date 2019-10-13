@@ -3,6 +3,7 @@
 ### Projektna naloga pri predmetu Programiranje 1
 
 Analiziral bom Lego sete, ki so izšli v zadnjih ~petih letih s spletne strani [brickset.com](https://brickset.com).
+
 Opazoval bom naslednje podatke:
 
 * tema
