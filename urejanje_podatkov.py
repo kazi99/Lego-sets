@@ -169,12 +169,18 @@ imena_polj = ['id', 'variant', 'ime_seta', 'tema', 'leto', 'tip_seta', 'figurice
 def ustvari_csv():
     orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.csv")
 
+#pozeni:
+
+# nalozi_strani()
+zdruzi_database()
+vsi_seti = list(filter(lambda a: a != None, vsi_seti))
+# ustvari_json()
+# ustvari_csv()
+
 
 # testi:
 
 
-zdruzi_database()
-vsi_seti = list(filter(lambda a: a != None, vsi_seti))
 # g = seti_na_spl_strani("/Users/thrawn/Documents/git/Lego-sets/html_na_roke/2019 | Brickset: LEGO set guide and database page-1.html")
 # print(next(g))
 # y = [x['eu_cas_izida'] for x in g]
