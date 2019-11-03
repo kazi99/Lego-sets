@@ -20,7 +20,7 @@ for zadetek in re.finditer(vzorec, vsebina):
     counter += 1
 
 
-<article class='set'>
+""" <article class='set'>
 <a href="https://images.brickset.com/sets/large/2000710-1.jpg?201911020910" class="highslide plain mainimg" onclick="return hs.expand(this)"><img src="https://images.brickset.com/sets/small/2000710-1.jpg?201911020910" title="2000710-1: WeDo Replacement Parts Pack" onError="this.src='/assets/images/spacer.png'" /></a>
 <div class="highslide-caption">
 <h1>WeDo Replacement Parts Pack</h1><div class='tags floatleft'><a href='/sets/2000710-1/WeDo-Replacement-Parts-Pack'>2000710-1</a> <a href='/sets/theme-Education'>Education</a> <a class='subtheme' href='/sets/theme-Education/subtheme-WeDo'>WeDo</a> <a class='year' href='/sets/theme-Education/year-2015'>2015</a> </div><div class='floatright'>&copy;2015 LEGO Group</div>
@@ -53,4 +53,4 @@ for zadetek in re.finditer(vzorec, vsebina):
 <a class='ebay' href="https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=9&pub=5574779132&toolid=10001&campid=5336183597&customid=&icep_uq=LEGO+40331&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg">eBay</a>
 </li><li>
 <a class="bricklink" href='http://alpha.bricklink.com/pages/clone/catalogitem.page?S=40331-1#T=S&O={"ss":"SI"}'>BrickLink</a>
-</li></ul></dd></dl></div></article>
+</li></ul></dd></dl></div></article> """

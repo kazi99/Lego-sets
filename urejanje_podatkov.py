@@ -168,6 +168,8 @@ imena_polj = ['id', 'variant', 'ime_seta', 'tema', 'leto', 'tip_seta', 'figurice
 
 def ustvari_csv():
     orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.csv")
+
+
 # testi:
 
 
