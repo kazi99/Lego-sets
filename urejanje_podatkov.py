@@ -135,7 +135,7 @@ def nalozi_strani():
 vsi_seti = []
 def zdruzi_database():
     """ v seznam `vsi_seti` prepise slovarje vseh setov s pomocjo generatorja `seti_na_spl_strani`. """
-    for i in range(1,316):
+    for i in range(1,316): # lahko boljse napisem s knjiznico os...
         spl_str = (
             f"/Users/thrawn/Documents/git/Lego-sets/html-nalozeni/brickset-database-{i}.html"
         )
