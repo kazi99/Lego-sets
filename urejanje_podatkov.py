@@ -1,18 +1,6 @@
 import re
 import orodja
 
-# id majo vsi
-# ime majo vsi
-# variant majo vsi
-# theme majo vsi
-# leto majo vsi
-
-# sub theme nimajo vsi <-- tega ne rabim
-# cene nimajo vsi
-# minifigs nimajo vsi
-# pieces nimajo vsi
-#  
-
 vzorec_bloka = re.compile(
     r"<article class='set'>.*?</article>",
     flags=re.DOTALL
@@ -21,10 +9,27 @@ vzorec_bloka = re.compile(
 vzorec_seta = re.compile(
     r"title=\"(?P<id>.*?)-(?P<variant>\d*?):(?P<ime_seta>.*?)\".*?"
     r"<a href='/sets/theme-.*?'>(?P<tema>.*?)</a>.*"
-    r">(?P<leto>.*?)</a> </div><div class='tags'><span id=.*?"
+    r">(?P<leto>.*?)</a> </div><div class='tags'><span id=.*?",
+    # r"<dt>Set type</dt><dd>(?P<tip_seta>.*?)</dd>.*?", # <-- ne dela samo za dva seta ki nimata defiranega tipa (bom dodal "na roke")
+    flags=re.DOTALL
+)
+
+vzorec_tip_seta = re.compile(
     r"<dt>Set type</dt><dd>(?P<tip_seta>.*?)</dd>.*?",
     flags=re.DOTALL
 )
+
+def tip_seta(blok, en_set):
+    ima_definiran_tip = vzorec_tip_seta.search(blok)
+    if ima_definiran_tip:
+        en_set['tip_seta'] = ima_definiran_tip['tip_seta'].strip().lower()
+    else:       # edino ta dva seta nimata podanega tipa v html-jih. Njiuni vrednosti sem pridobil iz: 
+        if en_set['id'] == '2000710':       # https://brickset.com/sets/2000710-1/WeDo-Replacement-Parts-Pack
+            en_set['tip_seta'] = 'extended'
+        elif en_set['id'] == '40331':       # https://brickset.com/sets/40331-1/Wolf
+            en_set['tip_seta'] = 'normal'
+        else:
+            pass
 
 vzorec_figuric = re.compile(
     r"<dt>Minifigs</dt><dd><a class=.*?>(?P<figurice>\d*?)</a>",
@@ -106,6 +111,7 @@ def match(blok, en_set, kategorija, vzorec, func):
 
 def podatki_seta_od(blok): #argument bo blok.group(0)
     if vzorec_seta.search(blok) == None:
+        print(blok)
         return
     else:
         en_set = vzorec_seta.search(blok).groupdict()
@@ -114,7 +120,10 @@ def podatki_seta_od(blok): #argument bo blok.group(0)
         # en_set['id'] = int(en_set['id']) ker niso vsi id-ji int
         en_set['variant'] = int(en_set['variant'])
         en_set['leto'] = int(en_set['leto'])
-        en_set['tip_seta'] = en_set['tip_seta'].strip().lower()
+        
+        tip_seta(blok, en_set)
+
+        # en_set['tip_seta'] = en_set['tip_seta'].strip().lower()
 
         # figurice(blok, en_set)
         # st_kock(blok, en_set)
@@ -162,18 +171,18 @@ def zdruzi_database():
 
 
 def ustvari_json():
-    orodja.zapisi_json(vsi_seti, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.json")
+    orodja.zapisi_json(vsi_seti, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019-new.json")
 
 imena_polj = ['id', 'variant', 'ime_seta', 'tema', 'leto', 'tip_seta', 'figurice', 'st_kock', 'us_cena', 'eu_cena', 'us_ppp', 'eu_ppp', 'pakiranje', 'dostopnost', 'us_cas_izida', 'eu_cas_izida']
 
 def ustvari_csv():
-    orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.csv")
+    orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019-new.csv")
 
 #pozeni:
 
 # nalozi_strani()
 zdruzi_database()
-vsi_seti = list(filter(lambda a: a != None, vsi_seti))
+# vsi_seti = list(filter(lambda a: a != None, vsi_seti))
 # ustvari_json()
 # ustvari_csv()
 
