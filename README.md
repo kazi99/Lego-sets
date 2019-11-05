@@ -42,4 +42,4 @@ Obdelani in urejeni podatki so shranjeni v datoteki `bricksets-database-2009-201
 * EU ceno in povprečno ceno na kocko v €
 * in čas izida v US in EU.
 
-Naletel pa sem tudi na dve izjemi v zapisu posamičnega blok v html datotekah pri zajemu podatkov, ki za razliko od preostalih 7719 vnosov v svojih html datotekah nista imeli podanega tipa. Tema dvema setoma s funkcijo `tip_seta` v skripti "ročno" podam njuna pravilna tipa.
+Naletel pa sem tudi na dve izjemi v zapisu posamičnega blok v html datotekah pri zajemu podatkov, ki za razliko od preostalih 7719 vnosov v svojih html datotekah nista imeli podanega tipa bloka teh dveh setov sem skopiral v datoteko `izjemi-brez-podanega-tipa.html`. Tema dvema setoma s funkcijo `tip_seta` v skripti "ročno" podam njuna pravilna tipa.
