@@ -144,12 +144,12 @@ def zdruzi_database():
 
 
 def ustvari_json():
-    orodja.zapisi_json(vsi_seti, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019-new.json")
+    orodja.zapisi_json(vsi_seti, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.json")
 
 imena_polj = ['id', 'variant', 'ime_seta', 'tema', 'leto', 'tip_seta', 'figurice', 'st_kock', 'us_cena', 'eu_cena', 'us_ppp', 'eu_ppp', 'pakiranje', 'dostopnost', 'us_cas_izida', 'eu_cas_izida']
 
 def ustvari_csv():
-    orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019-new.csv")
+    orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.csv")
 
 
 
