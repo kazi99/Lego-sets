@@ -116,18 +116,18 @@ def seti_na_spl_strani(ime_datoteke):
         yield podatki_seta_od(blok.group(0))
 
 def seti_na(leto):
-    sez = [20, 21, 24, 28, 29, 30, 32, 34, 34, 32, 31]
-    return sez[leto - 2009]
+    sez = [14, 16, 17, 18, 18, 17, 16, 19, 18, 18, 20, 21, 24, 28, 29, 30, 32, 34, 34, 32, 31]
+    return sez[leto - 1999]
 
 def nalozi_strani():
     counter = 1
-    for leto in range(2009, 2020):
+    for leto in range(1999, 2020):
         for i in range(1, seti_na(leto) + 1):
             url = (
                 f'https://brickset.com/sets/year-{leto}/page-{i}'
             )
             ime_datoteke = (
-                f"/Users/thrawn/Documents/git/Lego-sets/html-nalozeni/brickset-database-{counter}.html"
+                f"/Users/thrawn/Documents/git/Lego-sets/html-nalozeni-1999-2019/brickset-database-{counter}.html"
             )
             orodja.shrani_spletno_stran(url, ime_datoteke, vsili_prenos=False)
             counter += 1
@@ -135,21 +135,21 @@ def nalozi_strani():
 vsi_seti = []
 def zdruzi_database():
     """ v seznam `vsi_seti` prepise slovarje vseh setov s pomocjo generatorja `seti_na_spl_strani`. """
-    for i in range(1,316): # lahko boljse napisem s knjiznico os...
+    for i in range(1,487): # lahko boljse napisem s knjiznico os...
         spl_str = (
-            f"/Users/thrawn/Documents/git/Lego-sets/html-nalozeni/brickset-database-{i}.html"
+            f"/Users/thrawn/Documents/git/Lego-sets/html-nalozeni-1999-2019/brickset-database-{i}.html"
         )
         for en_set in seti_na_spl_strani(spl_str):
             vsi_seti.append(en_set)
 
 
 def ustvari_json():
-    orodja.zapisi_json(vsi_seti, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.json")
+    orodja.zapisi_json(vsi_seti, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-1999-2019.json")
 
 imena_polj = ['id', 'variant', 'ime_seta', 'tema', 'leto', 'tip_seta', 'figurice', 'st_kock', 'us_cena', 'eu_cena', 'us_ppp', 'eu_ppp', 'pakiranje', 'dostopnost', 'us_cas_izida', 'eu_cas_izida']
 
 def ustvari_csv():
-    orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-2009-2019.csv")
+    orodja.zapisi_csv(vsi_seti, imena_polj, "/Users/thrawn/Documents/git/Lego-sets/obdelani-podatki/bricksets-database-1999-2019.csv")
 
 
 
@@ -167,7 +167,7 @@ def ustvari_csv():
 #--------------------------pozeni--------------------------
 
 # nalozi_strani()
-zdruzi_database()
+# zdruzi_database()
 # ustvari_json()
 # ustvari_csv()
 
