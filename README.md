@@ -50,5 +50,5 @@ Obdelani in urejeni podatki so shranjeni v datoteki `bricksets-database-2009-201
 
 Naletel pa sem tudi na dve izjemi v zapisu posamičnih blokov v html datotekah med zajemanjem podatkov, ki za razliko od preostalih 11887 vnosov v svojih html datotekah nista imeli podanega tipa. Bloka teh dveh setov sem skopiral v datoteko `izjemi-brez-podanega-tipa.html` in jima s funkcijo `tip_seta` v skripti "ročno" podal njuna pravilna tipa.
 
-Analiza podatkov je shranjena v datoteki `lego_analiza.ipynb`, zraven pa je še datoteka `pomozna_analiza.ipynb` v kateri je shranjen le moj proces risanja grafov in nasploh razvijanja glavne analize podatkov v prvo omenjeni datoteki.
+Analiza podatkov je shranjena v datoteki `lego_analiza.ipynb`, zraven pa je še datoteka `pomozna_analiza.ipynb` v kateri je moj proces risanja grafov in nasploh razvijanja glavne analize podatkov v prvo omenjeni datoteki.
 ____
