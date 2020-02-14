@@ -1,4 +1,4 @@
-# Lego-sets
+# Analiza Lego™ setov zadnjih dvajsetih let
 
 ### Projektna naloga pri predmetu Programiranje 1 na [FMF](https://www.fmf.uni-lj.si/si/)
 
