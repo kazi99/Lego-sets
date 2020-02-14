@@ -1,6 +1,6 @@
 # Lego-sets
 
-### Projektna naloga pri predmetu Programiranje 1
+### Projektna naloga pri predmetu Programiranje 1 na [FMF](https://www.fmf.uni-lj.si/si/)
 
 Analiziral bom Lego sete, ki so izšli v zadnjih ~petih letih s spletne strani [brickset.com](https://brickset.com/sets).
 
@@ -48,6 +48,7 @@ Obdelani in urejeni podatki so shranjeni v datoteki `bricksets-database-2009-201
 * EU ceno in povprečno ceno na kocko v €
 * in čas izida v US in EU.
 
-Naletel pa sem tudi na dve izjemi v zapisu posamičnih blokov v html datotekah med zajemanjem podatkov, ki za razliko od preostalih 7719 vnosov v svojih html datotekah nista imeli podanega tipa. Bloka teh dveh setov sem skopiral v datoteko `izjemi-brez-podanega-tipa.html` in jima s funkcijo `tip_seta` v skripti "ročno" podal njuna pravilna tipa.
+Naletel pa sem tudi na dve izjemi v zapisu posamičnih blokov v html datotekah med zajemanjem podatkov, ki za razliko od preostalih 11887 vnosov v svojih html datotekah nista imeli podanega tipa. Bloka teh dveh setov sem skopiral v datoteko `izjemi-brez-podanega-tipa.html` in jima s funkcijo `tip_seta` v skripti "ročno" podal njuna pravilna tipa.
 
+Analiza podatkov je shranjena v datoteki `lego_analiza.ipynb`, zraven pa je še datoteka `pomozna_analiza.ipynb` v kateri je shranjen le moj proces risanja grafov in nasploh razvijanja glavne analize podatkov v prvo omenjeni datoteki.
 ____
