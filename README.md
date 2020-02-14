@@ -28,12 +28,12 @@ Hipoteze:
    2. Cena minifigure skozi leta
    
 ____
-#### Od nedavnega ta git repozitorij vseubuje še naslednje:
+#### Ta git repozitorij vsebuje:
 - mapo `obdelani-podatki`, kjer sta shranjeni `.json` in `.csv` datoteki zbranih in obdelanih podatkov,
-- mapo `html-nalozeni`, ki vsebuje 315 `.html` datotek, ki sem jih naložil s spletne strani [brickset.com](https://brickset.com/sets) in so namenjene obdelavi,
+- mapo `html-nalozeni-1999-2019`, ki vsebuje 486 `.html` datotek, ki sem jih naložil s spletne strani [brickset.com](https://brickset.com/sets) in so namenjene obdelavi,
 - datoteki `urejanje_podatkov.py` in `orodja.py`, ki predstavljata skripti za zajem in obdelavo podatkov.
 
-Obdelani in urejeni podatki so shranjeni v datoteki `bricksets-database-2009-2019.csv` in obsegajo kategorije:
+Obdelani in urejeni podatki so shranjeni v datoteki `bricksets-database-1999-2019.csv` in obsegajo kategorije:
 * id
 * varianta
 * ime seta
