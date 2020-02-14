@@ -17,10 +17,16 @@ Opazoval bom naslednje podatke:
 * popularnost
 
 Hipoteze:
-* Kako je cena po kocki odvisna od teme
-* Spreminjanje povprečne cene setov iz posamezne teme v odvisnosti od leta izdaje
-* Cena minifigure v odvisnosti od teme, leta izdaje, dostopnosti
-* Popularnost v odvisnosti od teme, števila minifigur, cene po kocki
+1. Lego vsako leto izda več setov
+2. Velikosti setov skozi leta
+3. *ppp*
+   1. Povprečna cena kocke narašča skozi leta
+   2. Seti z nižjim *ppp* vsebujejo več kock
+4. Najbolj izdane teme
+5. Minifigure
+   1. Dražji seti vsebujejo več minifigur
+   2. Cena minifigure skozi leta
+   
 ____
 #### Od nedavnega ta git repozitorij vseubuje še naslednje:
 - mapo `obdelani-podatki`, kjer sta shranjeni `.json` in `.csv` datoteki zbranih in obdelanih podatkov,
